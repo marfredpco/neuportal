@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEU Portal</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="{% static '/materialize/css/materialize.css' %}">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="{% static '/materialize/js/materialize.js' %}"></script>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Andada&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="row">
+		<div class="col l3 s12">
+			{% include 'automate/navbar.html' %}
+		</div>
+		<div class="col l9 s12">
+			{% block content %}
+
+			
+			{% endblock %}
+		</div>
+	</div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="{% static '/materialize/js/materialize.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+        
+    </script>
+</body>
+</html>
